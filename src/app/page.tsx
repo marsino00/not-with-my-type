@@ -48,7 +48,7 @@ export default function Home() {
       formData.append("fontFile", file, file.name);
 
       // Se envía la fuente al endpoint /upload
-      const res = await fetch("http://localhost:5000/upload", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/upload`, {
         method: "POST",
         body: formData,
       });
@@ -63,10 +63,14 @@ export default function Home() {
 
       // Para la descarga, puedes redirigir al endpoint /download/<filename>
       // Por ejemplo, abriendo la URL en una nueva pestaña:
-      const downloadUrl = `http://localhost:5000/download/${data.filename}`;
+      const downloadUrl = `${process.env.NEXT_PUBLIC_API_URL}/download/${data.filename}`;
       window.open(downloadUrl, "_blank");
-    } catch (err: any) {
-      setError(err.message || "An error occurred processing the font.");
+    } catch (err: unknown) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "An error occurred processing the font."
+      );
     } finally {
       setIsProcessing(false);
     }
