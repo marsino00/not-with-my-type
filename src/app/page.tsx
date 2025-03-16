@@ -95,7 +95,7 @@ export default function Home() {
         <button
           className="text-lg hover:underline font-bold"
           onClick={() =>
-            (window.location.href = "mailto:contact@notwithmytype.com")
+            (window.location.href = "mailto:notwithmytype@gmail.com ")
           }
         >
           CONTACT US

@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Notwithmytype - Font Processing Tool",
   description: "Relaunch your typographies with a non-negotiable change",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
