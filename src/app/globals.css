@@ -11,3 +11,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-yankee);
 }
+.bold-text {
+  font-family: "YankeeBold", sans-serif;
+}

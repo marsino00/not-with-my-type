@@ -91,7 +91,7 @@ export default function Home() {
           />
         </div>
         <button
-          className="text-2xl hover:underline font-black pr-7"
+          className="text-3xl hover:underline font-black pr-7 bold-text"
           onClick={() =>
             (window.location.href = "mailto:notwithmytype@gmail.com ")
           }
@@ -101,7 +101,8 @@ export default function Home() {
       </div>
 
       <section className="">
-        <h2 className="text-2xl font-black mb-2 ml-6">
+        <h2 className="bold-text text-2xl font-black mb-2 ml-6">
+          {/* <h2 className=" text-2xl font-black mb-2 ml-6"> */}
           Join us for a better word.
         </h2>
         <p className="text-xl mb-1 ml-6">
