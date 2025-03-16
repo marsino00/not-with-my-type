@@ -78,36 +78,36 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-8 md:p-24">
-      <nav className="flex justify-between items-center">
-        {/* GIF más grande */}
-        <div className="w-5/6">
+      <div className="flex justify-between items-start">
+        <div className="w-4/6">
           <Image
             rel="preload"
             src="/notwithmytype2.gif"
             alt="Notwithmytype"
-            style={{ objectFit: "fill", width: "80%", height: "300px" }}
-            width={900}
-            height={100}
+            className="h-auto"
+            width={5000}
+            height={750}
             priority
-            unoptimized
           />
         </div>
         <button
-          className="text-lg hover:underline font-bold"
+          className="text-2xl hover:underline font-black pr-7"
           onClick={() =>
             (window.location.href = "mailto:notwithmytype@gmail.com ")
           }
         >
           CONTACT US
         </button>
-      </nav>
+      </div>
 
-      <section>
-        <h2 className="text-2xl font-bold mb-2">Join us for a better word.</h2>
-        <p className="text-xl mb-1">
+      <section className="">
+        <h2 className="text-2xl font-black mb-2 ml-6">
+          Join us for a better word.
+        </h2>
+        <p className="text-xl mb-1 ml-6">
           Relaunch your typographies with a non-negotiable change:
         </p>
-        <p className="text-xl italic mb-12">the N-word blocked.</p>
+        <p className="text-xl italic mb-12 ml-6">the N-word blocked.</p>
 
         <div
           className={`relative rounded-[2rem] bg-black text-white p-8 h-[300px] transition-all
