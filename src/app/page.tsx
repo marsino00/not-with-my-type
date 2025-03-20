@@ -76,6 +76,17 @@ export default function Home() {
     }
   };
 
+  const handleDownloadFile = (): void => {
+    const pdfUrl = "/SPREAD THE WORD.ai";
+
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.setAttribute("download", "SPREAD THE WORD.ai");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <main className="min-h-screen p-8 md:p-24">
       <div className="flex justify-between items-start">
@@ -90,19 +101,26 @@ export default function Home() {
             priority
           />
         </div>
-        <button
-          className="text-3xl hover:underline font-black pr-7 bold-text"
-          onClick={() =>
-            (window.location.href = "mailto:notwithmytype@gmail.com ")
-          }
-        >
-          CONTACT US
-        </button>
+        <div className="flex space-x-8 py-15">
+          <button
+            className="text-2xl hover:underline font-black bold-text"
+            onClick={handleDownloadFile}
+          >
+            SPREAD THE WORD
+          </button>
+          <button
+            className="text-2xl hover:underline font-black bold-text"
+            onClick={() =>
+              (window.location.href = "mailto:notwithmytype@gmail.com")
+            }
+          >
+            CONTACT US
+          </button>
+        </div>
       </div>
 
       <section className="">
         <h2 className="bold-text text-2xl font-black mb-2 ml-6">
-          {/* <h2 className=" text-2xl font-black mb-2 ml-6"> */}
           Join us for a better word.
         </h2>
         <p className="text-xl mb-1 ml-6">
