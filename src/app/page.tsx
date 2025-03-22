@@ -99,6 +99,7 @@ export default function Home() {
             width={5000}
             height={750}
             priority
+            unoptimized
           />
         </div>
         <div className="flex space-x-8 py-15">
